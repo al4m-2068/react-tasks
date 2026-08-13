@@ -1,28 +1,4 @@
-import Santri from "./tasks/task-130826/Santri"
-
-const santri = [
-  {
-    id: 1,
-    nama: "Ahmad",
-    kelas: "XI",
-    hobi: "Coding",
-    aktif: true
-  },
-  {
-    id: 2,
-    nama: "Ali",
-    kelas: "XII",
-    hobi: "Membaca",
-    aktif: false
-  },
-  {
-    id: 3,
-    nama: "Umar",
-    kelas: "X",
-    hobi: "Futsal",
-    aktif: true
-  }
-];
+import Santri, { santri } from "./tasks/task-130826/Santri"
 function App() {
   return (
     <>

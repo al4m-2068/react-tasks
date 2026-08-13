@@ -1,8 +1,26 @@
-
-
-
-import React from 'react'
-
+export const santri = [
+  {
+    id: 1,
+    nama: "Ahmad",
+    kelas: "XI",
+    hobi: "Coding",
+    aktif: true
+  },
+  {
+    id: 2,
+    nama: "Ali",
+    kelas: "XII",
+    hobi: "Membaca",
+    aktif: false
+  },
+  {
+    id: 3,
+    nama: "Umar",
+    kelas: "X",
+    hobi: "Futsal",
+    aktif: true
+  }
+];
 export default function Santri({nama, kelas, hobi, aktif}) {
   return (
     <>
