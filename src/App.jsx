@@ -1,8 +1,10 @@
 import Santri, { santri } from "./tasks/task-130826/Santri"
+import Task from "./tasks/task-180826/Task"
+import Task6 from "./tasks/task-190826/Task6"
 function App() {
   return (
     <>
-      {santri.map((person) => (
+      {/* {santri.map((person) => (
         <>
           <h1>======================</h1>
           <div key={person.id}>
@@ -10,7 +12,8 @@ function App() {
           </div>
           <h1>======================</h1>
         </>
-      ))}
+      ))} */}
+      <Task6/>
     </>
   )
 }
