@@ -8,6 +8,7 @@ function Task6() {
          <div className='flex flex-col items-center px-20 py-10 gap-10 bg-task6-bluelight/28 backdrop-blur-lg rounded-3xl border-2 border-zinc-300/18'>
             <h1 className='text-2xl font-bold uppercase'>ウエブサイト<sup>&reg;</sup></h1>
             <form className='flex flex-col text-sm gap-6 items-center' onSubmit={(e) => {
+               e.preventDefault()
                console.log(e.target.elements);
                setPassword('')
                setUsername('')
