@@ -9,7 +9,8 @@ function Task6() {
             <h1 className='text-2xl font-bold uppercase'>ウエブサイト<sup>&reg;</sup></h1>
             <form className='flex flex-col text-sm gap-6 items-center' onSubmit={(e) => {
                e.preventDefault()
-               console.log(e.target.elements);
+               console.log(`Your username: ${e.target.elements.username.value}`);
+               console.log(`Save your password: ${e.target.elements.password.value}`);
                setPassword('')
                setUsername('')
             }}>
@@ -17,14 +18,14 @@ function Task6() {
                <fieldset className='flex flex-col gap-4'>
                   <div className='flex flex-col gap-2'>
                      <label htmlFor="username">Username</label>
-                     <input type="text" id='username' className='w-62.5 p-4 h-8 bg-white border border-zinc-300 rounded-sm placeholder:text-zinc-400 text-zinc-800' placeholder='UebuMaster12' onChange={(e) => {
+                     <input type="text" id='username' value={username} className='w-62.5 p-4 h-8 bg-white border border-zinc-300 rounded-sm placeholder:text-zinc-400 text-zinc-800' placeholder='UebuMaster12' onChange={(e) => {
                         setUsername(e.target.value)
                      }} />
                      <p>{username && (username == 'Fulan' || username == 'fulan' ? 'Username taken' : `It'll look like this: @${username}`)}</p>
                   </div>
                   <div className='flex flex-col gap-2'>
                      <label htmlFor="password">Password</label>
-                     <input type="password" id='password' className='w-62.5 p-4 h-8 bg-white border border-zinc-300 rounded-sm placeholder:text-zinc-400 text-zinc-800' placeholder='••••••••' onChange={(e) => {
+                     <input type="password" id='password' value={password} className='w-62.5 p-4 h-8 bg-white border border-zinc-300 rounded-sm placeholder:text-zinc-400 text-zinc-800' placeholder='••••••••' onChange={(e) => {
                         setPassword(e.target.value)
                      }} />
                      <p>{password && (password.length < 8 ? 'At least 8 chars' : `Check password: ${password}`)}</p>
