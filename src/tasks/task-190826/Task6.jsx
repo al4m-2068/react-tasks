@@ -17,15 +17,15 @@ function Task6() {
                <h1 className='font-bold text-2xl self-start'>Sign Up</h1>
                <fieldset className='flex flex-col gap-4'>
                   <div className='flex flex-col gap-2'>
-                     <label htmlFor="username">Username</label>
-                     <input type="text" id='username' value={username} className='w-62.5 p-4 h-8 bg-white border border-zinc-300 rounded-sm placeholder:text-zinc-400 text-zinc-800' placeholder='UebuMaster12' onChange={(e) => {
+                     <label htmlFor="username">Email</label>
+                     <input type="email" id='username' value={username} className={`w-62.5 p-4 h-8 border border-zinc-300 rounded-sm placeholder:text-zinc-400 ${username == '' ? 'text-zinc-800 bg-white' : username.includes('@') ? 'text-green-600 bg-green-100' : 'text-red-600 bg-red-100'}`} placeholder='wardenking@site.com' onChange={(e) => {
                         setUsername(e.target.value)
                      }} />
-                     <p>{username && (username == 'Fulan' || username == 'fulan' ? 'Username taken' : `It'll look like this: @${username}`)}</p>
+                     <p>{username && (username.includes('@') ? 'Valid email' : 'Please enter a valid email')}</p>
                   </div>
                   <div className='flex flex-col gap-2'>
                      <label htmlFor="password">Password</label>
-                     <input type="password" id='password' value={password} className='w-62.5 p-4 h-8 bg-white border border-zinc-300 rounded-sm placeholder:text-zinc-400 text-zinc-800' placeholder='••••••••' onChange={(e) => {
+                     <input type="password" id='password' value={password} className={`w-62.5 p-4 h-8 border border-zinc-300 rounded-sm placeholder:text-zinc-400 ${password == '' ? 'text-zinc-800 bg-white' : password.length < 8 ? 'text-red-600 bg-red-100' : 'text-green-600 bg-green-100'}`} placeholder='••••••••' onChange={(e) => {
                         setPassword(e.target.value)
                      }} />
                      <p>{password && (password.length < 8 ? 'At least 8 chars' : `Check password: ${password}`)}</p>
