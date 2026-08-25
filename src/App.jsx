@@ -1,6 +1,7 @@
 import Santri, { santri } from "./tasks/task-130826/Santri"
 import Task from "./tasks/task-180826/Task"
 import Task6 from "./tasks/task-190826/Task6"
+import Task7 from "./tasks/task-250826/Task7"
 function App() {
   return (
     <>
@@ -13,7 +14,7 @@ function App() {
           <h1>======================</h1>
         </>
       ))} */}
-      <Task6/>
+      <Task7/>
     </>
   )
 }
