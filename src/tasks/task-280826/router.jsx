@@ -23,7 +23,7 @@ export const pages = createBrowserRouter([
     element: <Tentang/>
   },
   {
-    path: '*',
+    path: '/*',
     element: <NotFound/>
   },
 ])
