@@ -5,7 +5,16 @@ import Task6 from "./tasks/task-190826/Task6"
 import Task7 from "./tasks/task-250826/Task7"
 import { pages } from "./tasks/task-280826/router"
 import Dashboard from "./tasks/task-280826/Dashboard"
+import { createContext, useState } from "react"
+import Navbar from "./tasks/NEW_task-040926/Navbar"
+import Profile from "./tasks/NEW_task-040926/Profile"
+
+// 04/09/26 - useContext
+export const NameContext = createContext('');
+
 function App() {
+  // 04/09/26 - useContext
+  const [nama, setNama] = useState('Fulan')
   return (
     <>
       {/* {santri.map((person) => (
@@ -17,7 +26,13 @@ function App() {
           <h1>======================</h1>
         </>
       ))} */}
-      <RouterProvider router={pages}/>
+      {/* <RouterProvider router={pages}/> */}
+      <NameContext.Provider value={{nama, setNama}}>
+        <div className="flex flex-col w-85 h-200 overflow-clip rounded-2xl bg-zinc-900 text-white font-sora">
+          <Navbar/>
+          <Profile/>
+        </div>
+      </NameContext.Provider>
     </>
   )
 }
