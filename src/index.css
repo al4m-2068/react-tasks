@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Sora:wght@100..800&Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Sekuya&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 @import 'tailwindcss';
+
 @theme {
   --color-task6-bluelight: #5882C1;
   --color-task6-blue: #0085FF;
   --color-task6-bluedark: #003465;
   --font-frank: 'Frank Ruhl Libre', serif;
   --font-sora: 'Sora', serif;
+  --font-rhdis: 'Red Hat Display', sans-serif;
+  --font-rh: 'Red Hat Text', sans-serif;
+  --font-zld: 'Zalando Sans', sans-serif;
+  --font-sky: 'Sekuya', sans-serif;
+  --font-urban: 'Urbanist', sans-serif;
 }
 @utility text-trim {
   text-box: trim-both cap alphabetic;
