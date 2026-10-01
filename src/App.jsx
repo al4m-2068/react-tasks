@@ -8,7 +8,9 @@
 // import { createContext, useState } from "react"
 // import Navbar from "./tasks/task-040926/Navbar"
 // import Profile from "./tasks/task-040926/Profile"
-import CounterApp from "./tasks/NEW_task-100926/CounterApp"
+import { RouterProvider } from "react-router"
+import CounterApp from "./tasks/task-100926/CounterApp"
+import { routes } from "./tasks/N_main-task-300926/router/router"
 
 // 04/09/26 - useContext
 // export const NameContext = createContext('');
@@ -35,8 +37,11 @@ function App() {
         </div>
       </NameContext.Provider> */}
 
-      {/* -----> NEW: 10/09/26 - useReducer <----- */}
-      <CounterApp/>
+      {/* -----> 10/09/26 - useReducer <----- */}
+      {/* <CounterApp/> */}
+
+      {/* -----> NEW: 30/09/26 - React Hook Form <----- */}
+      <RouterProvider router={routes} />
     </>
   )
 }
